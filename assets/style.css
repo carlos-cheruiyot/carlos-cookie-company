@@ -1,0 +1,246 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;0,800;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Define Custom Font Variables */
+:root {
+    --font-heading: 'Barlow', sans-serif;
+    --font-normal: 'Inter', sans-serif;
+}
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-normal); /* Apply normal font */
+    line-height: 1.6;
+    background-color: black; /* Set background color to black */
+    color: white; /* Change text color to white for contrast */
+}
+
+/* Main container */
+.boom-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation styles */
+header {
+    background-color: #f79c42;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Style for the Contact Us button */
+nav button {
+    background-color: #e67e22; /* Orange color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #f39c12; /* Lighter orange on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Hero Section (Boom) styles */
+.boom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.boom .left-side {
+    flex: 1;
+    max-width: 50%;
+}
+
+.boom .left-side .small-heading {
+    font-size: 1.2rem;
+    color: #f79c42;
+    font-weight: bold;
+    font-family: var(--font-heading); /* Apply heading font */
+}
+
+.boom h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+    color: white;
+    font-weight: bold;
+    font-family: var(--font-heading); /* Apply heading font */
+}
+
+.boom p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.boom .right-side {
+    flex: 1;
+    max-width: 50%;
+}
+
+.boom .right-side img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* About Us Section Styles */
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-us .about-content {
+    flex: 1;
+}
+
+.about-us .about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f79c42;
+}
+
+.about-us .about-content p {
+    font-size: 1.1rem;
+    color: #ddd;
+    line-height: 1.8;
+}
+
+.about-us .about-image {
+    flex: 1;
+}
+
+.about-us .about-image img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Our Cookies Section */
+.cookies {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.cookies h2 {
+    font-size: 2.5rem;
+    color: #f79c42;
+    margin-bottom: 20px;
+}
+
+.cookies p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+.cookie-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.cookie-item {
+    text-align: center;
+}
+
+.cookie-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .boom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boom .left-side, .boom .right-side {
+        max-width: 100%;
+    }
+
+    .boom h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .about-us {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us .about-content, .about-us .about-image {
+        max-width: 100%;
+    }
+
+    .cookie-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
